@@ -20,11 +20,15 @@ void german() {
     cout << "Приветствие на 'немецком' языке: Hallo, Welt!" << endl;
 }
 
+void spanish() {
+    cout << "Приветствие на 'испанском' языке: Hola, mundo!" << endl;
+}
+
 int main() {
     setlocale(LC_ALL, "");
 
     string language;
-    cout << "Поддерживаемые языки: russian, english, french, german" << endl;
+    cout << "Поддерживаемые языки: russian, english, french, german, spanish" << endl;
     cout << "Введите язык: ";
     cin >> language;
 
@@ -39,6 +43,9 @@ int main() {
     } 
     else if (language == "german") {
         german();
+    } 
+    else if (language == "spanish") {
+        spanish();
     } 
     else {
         cout << "Язык не поддерживается." << endl;
