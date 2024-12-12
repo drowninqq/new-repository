@@ -12,11 +12,15 @@ void english() {
     cout << "Приветствие на 'английском' языке: Hello, World!" << endl;
 }
 
+void french() {
+    cout << "Приветствие на 'французском' языке: Bonjour, le monde!" << endl;
+}
+
 int main() {
     setlocale(LC_ALL, "");
 
     string language;
-    cout << "Поддерживаемые языки: russian, english" << endl;
+    cout << "Поддерживаемые языки: russian, english, french" << endl;
     cout << "Введите язык: ";
     cin >> language;
 
@@ -25,6 +29,9 @@ int main() {
     } 
     else if (language == "english") {
         english();
+    } 
+    else if (language == "french") {
+        french();
     } 
     else {
         cout << "Язык не поддерживается." << endl;
