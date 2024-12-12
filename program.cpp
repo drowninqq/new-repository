@@ -18,14 +18,18 @@ void french() {
 
 void german() {
     cout << "Приветствие на 'немецком' языке: Hallo, Welt!" << endl;
-    return 0;  // Ошибка: не нужно возвращать значение в функции void
+    return 0;
+}
+
+void spanish() {
+    cout << "Приветствие на 'испанском' языке: Hola, mundo!" << endl;
 }
 
 int main() {
     setlocale(LC_ALL, "");
 
     string language;
-    cout << "Поддерживаемые языки: russian, english, french, german" << endl;
+    cout << "Поддерживаемые языки: russian, english, french, german, spanish" << endl;
     cout << "Введите язык: ";
     cin >> language;
 
@@ -40,6 +44,9 @@ int main() {
     } 
     else if (language == "german") {
         german();
+    } 
+    else if (language == "spanish") {
+        spanish();
     } 
     else {
         cout << "Язык не поддерживается." << endl;
